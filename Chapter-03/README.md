@@ -133,7 +133,7 @@ model.load_state_dict(torch.load("Schrodingers_Equation/models/model_LBFGS.pt"))
 ```
 |        Convergence animation   | LBFGS, 6.9k, Loss 1.47e-5 |
 |:----------:|:-------------:|
-|![](/figures/convergence.gif)|![](/figures/model_LBFGS_6960.png)|
+|![](./figures/convergence.gif)|![](./figures/model_LBFGS_6960.png)|
 ---
 
 ## 🙋‍♂️ 8. 常见问题
