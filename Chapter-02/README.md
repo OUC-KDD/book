@@ -166,3 +166,7 @@ llama_model()
   ```bash
   pip install numpy torch xarray netCDF4 scikit-learn transformers
   ```
+
+## 📚 九、引用
+
+[Song, N., Lv, C., Nie, J., Ye, M., Zhao, E., Ma, J., Liu, X., and Wei, Z. 2025. LLM-DSK: A Domain-Specific Semantic Knowledge-Guided Ocean Environment Prediction Method Based on Large Language Models. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing 18, 19453–19469. DOI: https://doi.org/10.1109/JSTARS.2025.3590651](https://ieeexplore.ieee.org/document/11083757)
