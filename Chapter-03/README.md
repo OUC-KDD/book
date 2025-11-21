@@ -154,4 +154,4 @@ model.load_state_dict(torch.load("Schrodingers_Equation/models/model_LBFGS.pt"))
 ## 📚 九、引用
 [Raissi, M., Perdikaris, P., and Karniadakis, G. E. 2019. Physics-Informed Neural Networks: A Deep Learning Framework for Solving Forward and Inverse Problems Involving Nonlinear Partial Differential Equations. Journal of Computational Physics 378, 686–707. DOI: https://doi.org/10.1016/j.jcp.2018.10.045](https://ieeexplore.ieee.org/document/11083757)
 
-[Erfan Hamdi and Izaiah Zhang. PINN Pytorch Implementation.](https://github.com/erfanhamdi/pinn-torch)
+[E., Hamdi, and I., Zhang. PINN Pytorch Implementation.](https://github.com/erfanhamdi/pinn-torch)

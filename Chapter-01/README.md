@@ -199,4 +199,4 @@ ConvLSTM(
 ## 📚 九、引用
 [Shi, X., Chen, Z., Wang, H., Yeung, D.-Y., Wong, W.-K., and Woo, W-C. 2015. Convolutional LSTM Network: A Machine Learning Approach for Precipitation Nowcasting. In Proceedings of the 29th International Conference on Neural Information Processing Systems (NIPS ’15), Vol. 1. MIT Press, Cambridge, MA, 802–810.](https://dl.acm.org/doi/10.5555/2969239.2969329)
 
-[Palazzi A., Yu H., & Pini S. ConvLSTM PyTorch Implementation.](https://github.com/ndrplz/ConvLSTM_pytorch)
+[Palazzi, A., Yu, H., and Pini, S. ConvLSTM PyTorch Implementation.](https://github.com/ndrplz/ConvLSTM_pytorch)
