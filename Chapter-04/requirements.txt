@@ -1,0 +1,8 @@
+numpy
+scipy
+torch>=1.8.0
+torchvision
+einops
+scikit-image
+matplotlib
+tqdm
