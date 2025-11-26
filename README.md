@@ -3,7 +3,8 @@
 ## 目录
 
 * [环境配置](环境配置/)
-* [Chapter 1: ConvLSTM](Chapter-01/)
+* [Chapter 1: ConvLSTM 海表温度预测](Chapter-01/)
 * [Chapter 2: LLama 海表温度预测](Chapter-02/)
 * [Chapter 3: Schrödinger 方程 PINN 求解](Chapter-03/)
-* [Chapter 4: CAMixer](Chapter-04/)
+* [Chapter 4: CAMixer 图像变化检测](Chapter-04/)
+* [Chapter 5: SVR 海浪高度预测](Chapter-05/)
