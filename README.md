@@ -9,3 +9,4 @@
 * [Chapter 4: CAMixer 图像变化检测](Chapter-04/)
 * [Chapter 5: SVR 海浪高度预测](Chapter-05/)
 * [Chapter 6: MDN 水色参数反演](Chapter-06/)
+* [Chapter 7: MITgcm 内波模拟 + FNO 超分辨率](Chapter-07/)
