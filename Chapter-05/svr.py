@@ -34,7 +34,7 @@ def load_buoy_csv(path):
     """
     df = pd.read_csv(path)
 
-    # 统一列名顺序：只要包含这三列即可
+    # 统一列名顺序
     # 有的文件是 [DateTime, u10, v10, WVHT]，有的是 [DateTime, WVHT, u10, v10]
     df['DateTime'] = pd.to_datetime(df['DateTime'])
     df = df.sort_values('DateTime').set_index('DateTime')
@@ -102,7 +102,6 @@ def build_time_series_samples(df, history_len=24, horizon=1):
 def build_svr_model():
     """
     线性核 SVR（LinearSVR）+ 标准化
-    训练速度远快于 RBF-SVR，适合你现在 4 万多条样本的规模。
     """
     svr = Pipeline([
         ('scaler', StandardScaler()),
@@ -156,7 +155,7 @@ def train_and_eval_svr(X, y, train_ratio=0.8):
 
 
 # =========================
-# 5. 主程序示例
+# 5. 主程序
 # =========================
 if __name__ == "__main__":
     # 以 46221 这一个浮标为例，如需 46251 只需换文件名
@@ -168,7 +167,7 @@ if __name__ == "__main__":
     print("46221 预处理后数据形状:", df_21.shape)
 
     # 构造时间序列样本（例如：用前 24 小时预测下一小时）
-    history_len = 24   # 可以改成 12, 48 等，视论文设定而定
+    history_len = 24   
     horizon = 1        # 预测 1 小时后
     X, y = build_time_series_samples(df_21, history_len=history_len,
                                      horizon=horizon)
@@ -178,8 +177,3 @@ if __name__ == "__main__":
     # 训练 + 测试
     model = train_and_eval_svr(X, y, train_ratio=0.8)
 
-    # 如果你想对 46251 也做同样处理，可以再来一遍：
-    # df_51 = load_buoy_csv(path_46251)
-    # X51, y51 = build_time_series_samples(df_51, history_len=history_len,
-    #                                      horizon=horizon)
-    # model_51 = train_and_eval_svr(X51, y51, train_ratio=0.8)
