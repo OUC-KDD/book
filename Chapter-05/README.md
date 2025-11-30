@@ -158,11 +158,9 @@ python svr.py
 
 # 📚 九、引用
 
-[1] Cortes, C., and Vapnik, V. **Support-vector networks.** *Machine Learning*, 20(3), 273–297, 1995.  
-https://doi.org/10.1007/BF00994018
+1, Cortes, C., and Vapnik, V. 1995. Support-vector networks. Machine Learning, 20(3), 273–297. DOI: https://doi.org/10.1007/BF00994018
 
-[2] Smola, A. J., and Schölkopf, B. **A tutorial on support vector regression.** *Statistics and Computing*, 14, 199–222, 2004.  
-https://doi.org/10.1023/B:STCO.0000035301.49549.88
+2, Smola, A. J., and Schölkopf, B. 2004. A tutorial on support vector regression. Statistics and Computing, 14, 199–222. DOI: https://doi.org/10.1023/B:STCO.0000035301.49549.88
 
 ---
 

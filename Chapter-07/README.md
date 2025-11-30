@@ -351,12 +351,12 @@ Dataset split: Train=24, Val=3, Test=4
 
 ## 📚 八、参考文献
 
-[Marshall, J., Adcroft, A., Hill, C., Perelman, L., and Heisey, C. 1997. *A finite-volume, incompressible Navier Stokes model for studies of the ocean on parallel computers.* Journal of Geophysical Research: Oceans, 102(C3), 5753–5766.](https://doi.org/10.1029/96JC02775)
+1, Marshall, J., Adcroft, A., Hill, C., Perelman, L., and Heisey, C. 1997. A finite-volume, incompressible Navier Stokes model for studies of the ocean on parallel computers. Journal of Geophysical Research: Oceans, 102(C3), 5753–5766. DOI: https://doi.org/10.1029/96JC02775
 
-[Marshall, J., Hill, C., Perelman, L., and Adcroft, A. 1997. *Hydrostatic, quasi-hydrostatic, and nonhydrostatic ocean modeling.* Journal of Geophysical Research: Oceans, 102(C3), 5733–5752.](https://doi.org/10.1029/96JC02776)
+2, Marshall, J., Hill, C., Perelman, L., and Adcroft, A. 1997. Hydrostatic, quasi-hydrostatic, and nonhydrostatic ocean modeling.Journal of Geophysical Research: Oceans, 102(C3), 5733–5752. DOI: https://doi.org/10.1029/96JC02776
 
-[MITgcm Group and Contributors. *MITgcm: Massachusetts Institute of Technology General Circulation Model.*](https://github.com/MITgcm/MITgcm)
+3, MITgcm Group and Contributors. MITgcm: Massachusetts Institute of Technology General Circulation Model. https://github.com/MITgcm/MITgcm
 
-[Li, Z., Kovachki, N., Azizzadenesheli, K., Liu, B., Bhattacharya, K., Stuart, A., and Anandkumar, A. 2020. *Fourier Neural Operator for Parametric Partial Differential Equations.* In Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS ’20).](https://arxiv.org/abs/2010.08895)
+4, Li, Z., Kovachki, N., Azizzadenesheli, K., Liu, B., Bhattacharya, K., Stuart, A., and Anandkumar, A. 2020. Fourier Neural Operator for Parametric Partial Differential Equations. In Proceedings of the 34th Conference on Neural Information Processing Systems (NeurIPS ’20). https://arxiv.org/abs/2010.08895
 
-[Li, Z., Kovachki, N., and contributors. *Fourier Neural Operator (FNO) PyTorch Implementation.*](https://github.com/neuraloperator/neuraloperator)
+5, Li, Z., Kovachki, N., and contributors. Fourier Neural Operator (FNO) PyTorch Implementation.https://github.com/neuraloperator/neuraloperator

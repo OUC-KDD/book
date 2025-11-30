@@ -1,4 +1,4 @@
-# MDN_V2 水色参数反演模型
+# 🌊 MDN_V2 水色参数反演模型
 本项目提供一个基于MDN神经网络方法集合的海洋水色参数反演模型，用于结合相关的卫星观测数据，求解生物光学模型，
 进而反演叶绿素浓度，CDOM等相关物质。
 
@@ -234,10 +234,17 @@ Tests/main.py：测试模块，包含对图像估计功能和基准模型的测�
 ![Case3](./OLCI_benchmark_PC.png)
 
 # 9、引用
-该项目代码用于支持以下论文，使用时请引用相关论文：
-1、N. Pahlevan, et al. (2020). "Seamless retrievals of chlorophyll-a from Sentinel-2 (MSI) and Sentinel-3 (OLCI) in inland and coastal waters: A machine-learning approach". Remote Sensing of Environment. 111604.
-2、S.V. Balasubramanian, et al. (2020). "Robust algorithm for estimating total suspended solids (TSS) in inland and nearshore coastal waters". Remote Sensing of Environment. 111768.
-3、N. Pahlevan, et al. (2021). "Hyperspectral retrievals of phytoplankton absorption and chlorophyll-a in inland and nearshore coastal waters". Remote Sensing of Environment. 112200.
-4、B. Smith, et al. (2021). "A Chlorophyll-a Algorithm for Landsat-8 Based on Mixture Density Networks". Frontiers in Remote Sensing. 623678.
-5、K. Fickas, et al. (2023). "Leveraging multimission satellite data for spatiotemporally coherent cyanoHAB monitoring". Frontiers in Remote Sensing. 1157609.
-6、Ryan Edward O'Shea. (2023). MDN_V2. GitHub Repository. https://github.com/ryan-edward-oshea/MDN_V2
+
+1、 N., Oppelt, and R., Stumpf. 2020. Seamless retrievals of chlorophyll-a from Sentinel-2 (MSI) and Sentinel-3 (OLCI) in inland and coastal waters: A machine-learning approach. Remote Sensing of Environment 240, 111604. DOI: https://doi.org/10.1016/j.rse.2019.111604
+
+2、S., Balasubramanian, N., Pahlevan, B., Smith, C., Binding, J., Schalles, H., Loisel, D., Gurlin, S., Greb, K., Alikas, M., Randla, M., Bunkei, W., Moses, H., Nguyễn, M., Lehmann, D., O'Donnell, M., Ondrusek, Han, T., C., Fichot, T., Moore, and E., Boss. 2024. Robust algorithm for estimating total suspended solids (TSS) in inland and nearshore coastal waters. Remote Sensing of Environment 246, 111768. DOI: https://doi.org/10.1016/j.rse.2020.111768.
+
+3、N., Pahlevan, B., Smith, C., Binding, D., Gurlin, Li, L., M., Bresciani, and C., Giardino. 2021. Hyperspectral retrievals of phytoplankton absorption and chlorophyll-a in inland and nearshore coastal waters. Remote Sensing of Environment 253, 112200. DOI: https://doi.org/10.1016/j.rse.2020.112200
+
+4、B., Smith, N., Pahlevan, J., Schalles. S., Ruberg. R., Errera. Ma. R., C., Giardino. M., Brescian, C., Barbosa, T., Moore, V., Fernande, K., Alikas and K., Kangro. 2021. A Chlorophyll-a Algorithm for Landsat-8 Based on Mixture Density Networks. Frontiers in Remote Sensing 1, 623678. DOI: https://doi.org/10.3389/frsen.2020.623678
+
+
+5、K., Fickas, R., O'Shea, N., Pahlevan, B., Smith, S., Bartlett, and J., Wolny. 2023. Leveraging multimission satellite data for spatiotemporally coherent cyanoHAB monitoring. Frontiers in Remote Sensing 4, 1157609. DOI: https://doi.org/10.3389/frsen.2023.1157609
+
+
+6、B., Smith, R., O'Shea, and R., Machado. MDN_V2. https://github.com/ryan-edward-oshea/MDN_V2

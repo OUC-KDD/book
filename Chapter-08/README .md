@@ -69,7 +69,7 @@ project/
 
 原始数据位于：
 
-data/YYYY_MM/nc/*.nc
+```data/YYYY_MM/nc/*.nc```
 
 
 数据来源：
@@ -90,7 +90,7 @@ data/YYYY_MM/nc/*.nc
 
 ### 2. 数据裁剪与构造缺失（Visual_Tool.py）
 
-Visual_Tool.py 用于：
+```Visual_Tool.py``` 用于：
 
 从原始 NetCDF (.nc) 中读取变量：
 
@@ -140,7 +140,7 @@ python Visual_Tool.py
 
 Diffusion 类实现了 I2SB 中的 Schrödinger Bridge：
 
-1. β 调度与标准差构造
+### 1. β 调度与标准差构造
 
 在 run.py 中通过：
 
@@ -155,11 +155,11 @@ diffusion = Diffusion(betas, opt.device)
 
 构造对称的 β 序列，随后在 Diffusion.__init__ 中计算：
 
-std_fwd: 前向累积标准差
+```std_fwd```: 前向累积标准差
 
-std_bwd: 反向累积标准差
+```std_bwd```: 反向累积标准差
 
-mu_x0, mu_x1, std_sb: 由高斯乘积得到的桥接系数
+```mu_x0, mu_x1, std_sb```: 由高斯乘积得到的桥接系数
 
 对应理论上：
 
@@ -262,13 +262,13 @@ xs, pred_x0s = diffusion.ddpm_sampling(
 
 从损坏图 x1 沿 Schrödinger Bridge 逐步去噪，同时保持非云区强约束；
 
-最终 pred_x0s[:, -1] 作为 I2SB-SST 的重建结果。
+最终 ```pred_x0s[:, -1]``` 作为 I2SB-SST 的重建结果。
 
 ## 🧪 三、I2SB-SST 模型与训练（run.py + model.py）
 
 ### 1. 数据加载与划分
 
-在 run.py 中，首先读取 .h5：
+在 ```run.py``` 中，首先读取 .h5：
 
 ```
 x_train, y_train, x_valid, y_valid = deal_sst_util.read_cache(
@@ -281,9 +281,9 @@ val_data   = TensorDataset(torch.FloatTensor(x_valid), torch.FloatTensor(y_valid
 
 其中：
 
-x_*：带缺失 / 噪声的 SST 序列；
+```x_*```：带缺失 / 噪声的 SST 序列；
 
-y_*：对应完整 SST 序列。
+```y_*```：对应完整 SST 序列。
 
 在训练中，具体使用：
 
@@ -300,9 +300,9 @@ net = Image64Net(log, noise_levels=noise_levels, use_fp16=opt.use_fp16, cond=opt
 ema = ExponentialMovingAverage(net.parameters(), decay=opt.ema)
 ```
 
-Image64Net：I2SB 噪声预测网络，输入 (x_t, step, cond=x1)；
+```Image64Net```：I2SB 噪声预测网络，输入 ```(x_t, step, cond=x1)```；
 
-EMA：保存模型的滑动平均版本用于采样。
+```EMA```：保存模型的滑动平均版本用于采样。
 
 ### 3. 训练目标（噪声回归）
 
@@ -342,7 +342,7 @@ optimizer.step()
 ema.update()
 ```
 
-在训练过程中会定期调用 reconstru_visual.visua_and_save 保存：
+在训练过程中会定期调用 ```reconstru_visual.visua_and_save``` 保存：
 
 损坏样本：miss6
 
@@ -382,22 +382,22 @@ reconstructed_image = pred_x0s[:, -1]
 - batch 最优（最低 RMSE / MAE / MSE，最高 R² / SSIM / PSNR）；
 - 各 epoch 平均指标的最优值；
 
-将最终结果写入：**result_{N_S_ratio}_{corrup_rate}**文件中方便对比不同云覆盖率 / N/S 比的性能。
+将最终结果写入：```result_{N_S_ratio}_{corrup_rate}```文件中方便对比不同云覆盖率 / N/S 比的性能。
 
 ## 🔧 五、运行说明
 ### 第一步：从原始 NetCDF 生成 h5 数据
 
 确认：
 
-原始 NetCDF 在 data/YYYY_MM/nc/*.nc 中；
+原始 NetCDF 在 ```data/YYYY_MM/nc/*.nc``` 中；
 
-在 Visual_Tool.py 中设置好：
+在 ```Visual_Tool.py``` 中设置好：
 
 时间范围（2022.01–2023.04）
 
 区域范围（23–26°N，110–113°E）
 
-N_S_ratio、mask_type="Cloud_mask"、corrup_rate 等参数。
+```N_S_ratio、mask_type="Cloud_mask"、corrup_rate``` 等参数。
 
 执行：
 
@@ -405,11 +405,11 @@ N_S_ratio、mask_type="Cloud_mask"、corrup_rate 等参数。
 python Visual_Tool.py
 ```
 
-生成对应的：New_data/FNO_based_2024_2/data/{N_S_ratio}_{mask_type}_{corrup_rate}_train_South_Sea_*.h5
+生成对应的：```New_data/FNO_based_2024_2/data/{N_S_ratio}_{mask_type}_{corrup_rate}_train_South_Sea_*.h5```
 
 ### 第二步：运行 I2SB-SST 训练与验证
 
-run.py 已内置多组实验循环：
+```run.py``` 已内置多组实验循环：
 
 ```
 for N_S_ratio in {0.2, 0.3}:
@@ -449,8 +449,9 @@ pip install scikit-image opencv-python
 pip install pytorch-ssim
 ```
 
-如需地理可视化，可再安装 Basemap / Cartopy 等库（按实际需求）。
+如需地理可视化，可再安装 ```Basemap``` / ```Cartopy``` 等库（按实际需求）。
 
 ## 📚 七、引用
-Liu, G.-H., Vahdat, A., Huang, D.-A., Theodorou, E. A., Nie, W., & Anandkumar, A. (2023). I²SB: image-to-image Schrödinger bridge. In Proceedings of the 40th International Conference on Machine Learning (pp. 22042-22062). ACM. https://doi.org/10.5555/3618408.3619233.
-https://github.com/NVlabs/I2SB
+1, Liu, G.-H., Vahdat, A., Huang, D.-A., Theodorou, E. A., Nie, W., & Anandkumar, A. (2023). I²SB: image-to-image Schrödinger bridge. In Proceedings of the 40th International Conference on Machine Learning (pp. 22042-22062). ACM. DOI: https://doi.org/10.5555/3618408.3619233.
+
+2, I2SB. https://github.com/NVlabs/I2SB

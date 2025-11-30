@@ -150,6 +150,6 @@ pip install numpy torch scipy scikit-image matplotlib einops tqdm
 
 ## 📖 七、引用
 
-**Paper**: Haopeng Zhang, et al. "Convolution and Attention Mixer for Synthetic Aperture Radar Image Change Detection," IEEE Geoscience and Remote Sensing Letters, 2023.
+1, Zhang, H., Lin, Z., Gao, F., Dong, J., Du, Q., and Li, H. 2023. Convolution and Attention Mixer for Synthetic Aperture Radar Image Change Detection. IEEE Geoscience and Remote Sensing Letters 20, 1-5. DOI: https://doi.org/10.1109/LGRS.2023.3318593
 
-**Code**: https://github.com/summitgao/CAMixer
+2, Gao, F. CAMixer Implementation. https://github.com/summitgao/CAMixer

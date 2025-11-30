@@ -11,3 +11,4 @@
 * [Chapter 6: MDN 水色参数反演](Chapter-06/)
 * [Chapter 7: MITgcm 内波模拟 + FNO 超分辨率](Chapter-07/)
 * [Chapter 8: I2SB 海表温度补全](Chapter-08/)
+* [Chapter 9: STPDE-NET 基于时空偏微分方程的物理信息神经网络海温预测](Chapter-09/)
