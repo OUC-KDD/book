@@ -25,11 +25,9 @@ python main_fed.py
   w_{t+1}=\sum_{k=1}^K\frac{n_k}{n}w_k^t
 \]
 
-
 ---
 
 ## 📁 项目结构
-
 
 ```
 .
@@ -39,7 +37,7 @@ python main_fed.py
 ├── models/
 │   └── Fed.py                   # 模型平均
 │   ├── Net.py                   # 定义网络类型
-│   └── update.py                # 本地更新    
+│   └── update.py                # 本地更新  
 ├── utils/
 │   └── options.py               # 参数设置
 │   └── sampling.py              # 对Non-IID的数据分布进行采样 
@@ -77,11 +75,10 @@ python main_fed.py
 
 程序将自动：
 
-1. 下载并划分数据集  
-2. 初始化客户端和服务器  
+1. 下载并划分数据集
+2. 初始化客户端和服务器
 3. 执行联邦训练过程（多轮通信）
-4. 自动保存全局模型参数 
-
+4. 自动保存全局模型参数
 
 ---
 
@@ -94,6 +91,7 @@ python main_fed.py
 - 输出：10 个类别（数字 0-9）
 
 ### 2. 联邦训练流程
+
 - 基础模型：简单卷积神经网络（CNN）
 - 本地训练：客户端下载全局模型，用本地数据训练
 - 参数上传：客户端将训练后的模型参数发送给服务器
@@ -101,10 +99,12 @@ python main_fed.py
 - 模型更新：服务器更新全局模型，进入下一轮训练
 
 ### 3. 性能评估
+
 - 每轮训练后在测试集上评估全局模型准确率
 - 记录训练过程中的损失值和准确率变化
 
 ## 📚 四、引用
+
 [McMahan, Brendan, Eider Moore, Daniel Ramage, Seth Hampson, and Blaise Aguera y Arcas. Communication-Efficient Learning of Deep Networks from Decentralized Data. In Artificial Intelligence and Statistics (AISTATS), 2017.](https://www.semanticscholar.org/paper/Communication-Efficient-Learning-of-Deep-Networks-McMahan-Moore/d1dbf643447405984eeef098b1b320dee0b3b8a7)
 
 [Shaoxiong Ji. (2018, March 30). A PyTorch Implementation of Federated Learning. Zenodo.](http://doi.org/10.5281/zenodo.4321561)
