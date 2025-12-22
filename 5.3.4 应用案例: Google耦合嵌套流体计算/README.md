@@ -88,7 +88,7 @@ $$ \frac{\partial T}{\partial t} \approx \underbrace{\frac{Q_{net}}{\rho C_p h}}
 - Scikit-learn
 - tqdm
 
-### 2. 运行步骤 (以 CNN 模型为例)
+### 2. 运行步骤
 
 **步骤 1：训练模型**
 ```bash
